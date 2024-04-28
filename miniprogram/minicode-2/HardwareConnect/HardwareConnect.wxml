@@ -1,0 +1,56 @@
+<!-- <view class="intro">硬件连接</view> -->
+<view class="container">
+  <view class="btn-group">
+    <button class="btn" bindtap="addDevice">添加设备</button>
+    <button class="btn" bindtap="toggleManageMode">{{ managementMode ? '取消管理' : '管理' }}</button>
+  </view>
+  <checkbox-group wx:if="{{managementMode && deviceList.length > 0}}">
+    <checkbox value="selectAll" bindchange="selectAllDevices">全选</checkbox>
+  </checkbox-group>
+  <button wx:if="{{managementMode && deviceList.length > 0}}" bindtap="deleteDevices">删除</button>
+
+  <!-- 设备列表 -->
+  <view wx:for="{{deviceList}}" wx:key="id">
+    <!-- 设备名称和状态显示 -->
+    <view class="device-box" bindtap="showDeviceOptions" data-id="{{item.id}}">
+      <checkbox-group wx:if="{{managementMode}}">
+        <checkbox value="{{item.id}}" bindchange="selectDevice"></checkbox>
+      </checkbox-group>
+      <view>{{item.name}}</view>
+      <view>{{item.status}}</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 添加设备弹窗 -->
+<view class="modal-mask" wx:if="{{showAddDeviceModal}}">
+  <view class="modal">
+    <view class="modal-title">添加设备</view>
+    <input placeholder="请输入设备名称" bindinput="inputDeviceName"/>
+    <input placeholder="请输入WiFi名称" bindinput="inputWifiName"/>
+    <input type="password" placeholder="请输入WiFi密码" bindinput="inputWifiPassword"/>
+    <view class="modal-buttons">
+      <button bindtap="saveDevice">保存</button>
+      <button bindtap="cancelAddDevice">取消</button>
+    </view>
+  </view>
+</view>
+
+<!-- 修改设备参数弹窗 -->
+<view class="modal-mask" wx:if="{{showEditDeviceModal}}">
+  <view class="modal">
+    <view class="modal-title">修改设备参数</view>
+    <input placeholder="请输入设备名称" bindinput="inputDeviceName" value="{{editDeviceName}}"/>
+    <input placeholder="请输入WiFi名称" bindinput="inputWifiName" value="{{editWifiName}}"/>
+    <input type="password" placeholder="请输入WiFi密码" bindinput="inputWifiPassword" value="{{editWifiPassword}}"/>
+    <view class="modal-buttons">
+      <button bindtap="saveEditedDevice">保存</button>
+      <button bindtap="cancelEditDevice">取消</button>
+    </view>
+  </view>
+</view>
+
+
+
