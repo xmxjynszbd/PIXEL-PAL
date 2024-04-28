@@ -133,3 +133,31 @@ Reuturn video:
 ![](https://img-blog.csdnimg.cn/direct/bf83c04f2b874282ae0ea0dad6c6f4ac.png)
 ![](https://img-blog.csdnimg.cn/direct/e36c119ec4f249ab817ee39351c543b9.png)
 
+
+## PART 2 Miniprogram
+### Miniprogram receives pictrues and prompts uploaded by customers then upload them to the server, waiting for generated videos returned and transferring to the hardware.
+
+
+#### 1. Technology Stack
+
+- Javascript
+#### 2. Important Component
+
+- File Uploaded Interface
+- Video Processing Function
+- Hardware Wifi Connection and Communication
+
+
+
+## PART 3 Hardware
+### ESP32 receives data from miniprogram and displays on the screen.
+
+
+#### 1. Technology Stack
+
+- C
+
+#### 2. Important Component
+
+- stream data trasmission
+- Image display fuction
