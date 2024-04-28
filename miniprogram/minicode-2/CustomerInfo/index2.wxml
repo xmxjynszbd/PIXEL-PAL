@@ -1,0 +1,12 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 登录按钮 -->
+  <button wx:if="{{!userInfo}}" bindtap="login" class="login-btn">微信登录</button>
+  <!-- 用户个人界面 -->
+  <view wx:else class="user-profile">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" style="position: relative; left: -143rpx; top: -282rpx"></image>
+    <text class="username" style="position: relative; left: -36rpx; top: -429rpx">{{userInfo.nickName}}</text>
+    <button class="button" bindtap="gotoAboutMe" style="position: relative; left: -8rpx; top: -228rpx; width: 514rpx; height: 94rpx; display: block; box-sizing: border-box">关于我们</button>
+    <button class="button" bindtap="gotoSettings" style="position: relative; left: -8rpx; top: -205rpx; width: 514rpx; height: 94rpx; display: block; box-sizing: border-box">设置</button>
+  </view>
+</view>

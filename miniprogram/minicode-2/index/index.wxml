@@ -1,0 +1,38 @@
+<!-- index.wxml -->
+<view class="container">
+    <!-- 头部区域：上传和风格描述 -->
+    <view class="upload-section">
+        <!-- <button class="upload-btn" bindtap="chooseImage">选择文件</button> -->
+        <button class="upload-btn" bindtap="chooseImage" hidden="{{isImageChosen}}">选择文件</button>
+        <button class="upload-btn" bindtap="submitUpload" hidden="{{!isImageChosen}}">确认上传</button>
+        
+        <text>{{ imageSelectedName }}</text>
+        
+        <input class="description-input" placeholder="请输入你想为人物生成的动作" bindinput="inputActionDescription" />
+        <text class="word-count">{{ descriptionLength }}/200</text>
+    </view>
+
+    <!-- 中间区域：视频显示 -->
+    <!-- <view class="video-section" hidden="{{!videoUrl}}">
+        <video src="{{ videoUrl }}" autoplay loop></video>
+    </view> -->
+
+   
+
+    <view>
+      <loading wx:if="{{loading}}">加载中...</loading>
+      <image wx:if="{{gifUrl}}" src="{{gifUrl}}" mode="aspectFit"></image>
+      <view class="button-container"wx:if="{{gifUrl && !loading}}">
+        <button bindtap="castScreen">投屏</button>
+        <button bindtap="clearScreen">清空</button>
+      </view>
+
+    </view>
+
+    <!-- 底部区域：导航栏
+    <view class="nav-bar">
+        <view class="nav-item" bindtap="goToUpload">图片上传</view>
+        <view class="nav-item" bindtap="goToConnect">硬件连接</view>
+        <view class="nav-item" bindtap="goToProfile">个人信息</view>
+    </view> -->
+</view>

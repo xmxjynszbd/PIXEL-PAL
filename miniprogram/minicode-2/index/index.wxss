@@ -1,0 +1,64 @@
+/* index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-section {
+  padding: 10px;
+}
+
+.upload-btn {
+  background-color: #07C160;
+  color: white;
+}
+
+/* 页面的WXSS文件 */
+.loading {
+  text-align: center;
+  padding: 100rpx 0; /* 调整为适当的间距 */
+}
+
+.image {
+  width: 100%; /* 使图片宽度填充屏幕 */
+  height: auto; /* 高度自动调整以保持图片比例 */
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+
+.description-input {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+}
+
+.video-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.nav-item {
+  padding: 10px;
+}
