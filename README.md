@@ -128,7 +128,7 @@ Prompt：Singing a song
 Input Image：
 ![](https://img-blog.csdnimg.cn/direct/4a679aaa397442bfbda367a4b303e969.jpeg)
 
-Reuturn video:
+Return video:
 ![](https://img-blog.csdnimg.cn/direct/e717b8af11254df8aedfc11b04edbc14.png)
 ![](https://img-blog.csdnimg.cn/direct/bf83c04f2b874282ae0ea0dad6c6f4ac.png)
 ![](https://img-blog.csdnimg.cn/direct/e36c119ec4f249ab817ee39351c543b9.png)
@@ -159,5 +159,5 @@ Reuturn video:
 
 #### 2. Important Component
 
-- stream data trasmission
-- Image display fuction
+- Stream Data Trasmission
+- Image Display Function
